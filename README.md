@@ -1,68 +1,62 @@
-# Astro Starter Kit: Blog
+# 🛠️ Network Diagnostic Tool
 
-```sh
-npm create astro@latest -- --template blog
-```
+**Network Diagnostic Tool** es una herramienta automatizada desarrollada en script CMD que permite ejecutar pruebas de red comunes para distintas campañas de una empresa de forma rápida y organizada. Su objetivo es reducir los tiempos de diagnóstico en eventos críticos y estandarizar la recolección de información técnica.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+## 📌 Objetivo
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Desarrollar e implementar una herramienta de diagnóstico automatizado para reducir los tiempos de respuesta durante eventos críticos en múltiples campañas, facilitando la generación de registros técnicos de red.
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+---
 
-Features:
+## 📁 Contenido del Repositorio
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- `Network_Diagnostic_Tool.cmd`: script principal listo para ejecutar.
+- `README.md`: este documento.
+- `/docs/guia_de_uso.pdf` _(opcional)_: versión en PDF con instrucciones.
+- `/logs/ejemplos/`: logs de ejemplo generados por la herramienta.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ⚙️ Requisitos del sistema
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+- Windows 10 o superior
+- Acceso a CMD (no requiere permisos de administrador)
+- Conexión a red
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🚀 Uso de la herramienta
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+1. **Ejecutar el script**
 
-Any static assets, like images, can be placed in the `public/` directory.
+   - Haz doble clic sobre `Network_Diagnostic_Tool.cmd`.
 
-## 🧞 Commands
+2. **Seleccionar campaña**
 
-All commands are run from the root of the project, from a terminal:
+   - Elige una campaña del menú (por número).
+     ![git placeholder](/images/tool_menu_1.png)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. **Elegir destino**
 
-## 👀 Want to learn more?
+   - Selecciona el sitio o herramienta que deseas diagnosticar.
+     ![git placeholder](/images/tool_menu_2.png)
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+4. **Ejecutar diagnóstico**
 
-## Credit
+   - El script ejecutará automáticamente los siguientes comandos:
+     - `ipconfig /all`
+     - `ping [url]`
+     - `tracert -h 15 [url]`
+     - `nslookup [url]`
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+5. **Resultados**
+   - Los resultados se guardarán automáticamente en un archivo `.txt` en el escritorio.
+   - Se mostrará la ruta exacta del archivo y se abrirá en el bloc de notas.
+
+---
+
+## 📂 Ejemplo de ubicación del log
+
+- **_C:\Users\tecon\Desktop\logs_app1_2025-05-09.txt_**
+
+![git placeholder](/images/tool_patch.png)
